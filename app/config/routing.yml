@@ -1,0 +1,44 @@
+lbm_extension:
+    resource: "@LBMExtensionBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+lbm_referenciel:
+    resource: "@LBMReferencielBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+lbm_contact:
+    resource: "@LBMContactBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+lbm_user:
+    resource: "@LBMUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+lbm_dashboard:
+    resource: "@LBMDashboardBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+lbm_organization:
+    resource: "@LBMOrganizationBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+frontpage:
+    resource: "@FrontpageBundle/Controller/"
+    type:     annotation
+    prefix:   /public/
+
+root:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /public/
+        permanent: true
+
+
+

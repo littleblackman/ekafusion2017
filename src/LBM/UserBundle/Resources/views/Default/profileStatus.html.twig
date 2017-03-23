@@ -1,0 +1,44 @@
+{% if user %}
+    <li class="dropdown nav-profile">
+
+        <a href class="dropdown-toggle" data-toggle="dropdown">
+            <img src="{{ asset(user.avatarUrl) }}" alt="" class="img-circle size-30x30">
+            <span>{{ user.userName }}<i class="fa fa-angle-down"></i></span>
+        </a>
+
+        <ul class="dropdown-menu animated littleFadeInRight" role="menu">
+
+            <li>
+                <a role="button" tabindex="0" href="{{ path('showProfile') }}">
+                    <span class="badge bg-greensea pull-right">86%</span>
+                    <i class="fa fa-user"></i>Profile
+                </a>
+            </li>
+            <li>
+                <a role="button" tabindex="0">
+                    <span class="label bg-lightred pull-right">new</span>
+                    <i class="fa fa-check"></i>Tasks
+                </a>
+            </li>
+            <li>
+                <a role="button" tabindex="0" href="{{ path('settingsProfile') }}">
+                    <i class="fa fa-cog"></i>Settings
+                </a>
+            </li>
+            <li class="divider"></li>
+            <!--
+            <li>
+                <a role="button" tabindex="0">
+                    <i class="fa fa-lock"></i>Lock
+                </a>
+            </li>-->
+            <li>
+                <a href="{{ path('logout') }}" role="button" tabindex="0">
+                    <i class="fa fa-sign-out"></i>Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </li>
+{% endif %}

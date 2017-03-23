@@ -1,0 +1,4 @@
+services:
+#    lbm_dashboard.example:
+#        class: LBM\DashboardBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

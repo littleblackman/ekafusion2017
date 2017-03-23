@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!-- ============================================
+    ================= Stylesheets ===================
+    ============================================= -->
+
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic|Raleway:300,400,500,600,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('minovate/corporate/assets/css/bootstrap.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('minovate/corporate/assets/css/font-awesome.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('minovate/corporate/assets/css/animate.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('minovate/corporate/assets/js/vendor/flexslider/flexslider.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('minovate/corporate/assets/js/vendor/magnific/magnific-popup.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('minovate/corporate/assets/js/vendor/owl/owl.carousel.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('minovate/corporate/assets/js/vendor/owl/owl.theme.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('minovate/corporate/assets/js/vendor/morrisjs/morris.css') }}" type="text/css" />
+
+
+    <!-- animsition CSS -->
+    <link rel="stylesheet" href="{{ asset('minovate/corporate/assets/js/vendor/animsition/css/animsition.min.css') }}">
+
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/jquery-1.11.2.min.js') }}"></script>
+
+
+    <!-- ============================================
+    ============= Main App Stylesheet ===============
+    ============================================= -->
+
+    <link rel="stylesheet" href="{{ asset('minovate/corporate/assets/css/style.css')}}" type="text/css" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+
+    <!-- ============================================
+    ================== Page Title ===================
+    ============================================= -->
+
+    <title>Energy Kids Academy | Corporate </title>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+<!-- ============================================
+================= Page Wrapper ==================
+============================================= -->
+
+<div id="wrapper" class="clearfix animsition">
+
+
+
+
+
+
+
+    <!-- ================================================
+    ================= Search Container ==================
+    ================================================= -->
+
+    <div id="search-container" class="search-box-wrapper">
+        <div class="container">
+            <i class="fa fa-search"></i>
+            <div class="search-box">
+                <form action="http://example.com/" class="search-form" role="search" >
+                    <input type="search" name="s" value="" title="Press Enter to submit your search" placeholder="Search…" class="search-field">
+                    <input type="submit" value="Search" class="search-submit">
+                </form>
+            </div>
+        </div>
+    </div><!--/ #search-container -->
+
+
+
+
+
+
+
+
+    <!-- ============================================
+    ==================== Header =====================
+    ============================================= -->
+
+    {% include 'FrontpageBundle:Default:header.html.twig' %}
+
+
+
+
+
+
+
+
+
+
+    <!-- ============================================
+    =================== Breadcrumbs =================
+    ============================================= -->
+    <section id="breadcrumbs" class="breadcrumbs-sm">
+
+        <div class="container clearfix">
+            <h1>About Us</h1>
+            <span>Everything about us</span>
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li class="active">About Us</li>
+            </ol>
+        </div>
+
+    </section><!-- #breadcrumbs end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- ============================================
+    =================== Content =====================
+    ============================================= -->
+
+    <section id="content">
+
+        <div class="content-wrap">
+
+
+
+
+
+
+
+            <!-- ============ Features ============ -->
+            <div class="container clearfix">
+
+
+                {% block body %}{% endblock %}
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ============================================
+    ==================== Footer =====================
+    ============================================= -->
+
+    {% include 'FrontpageBundle:Default:footer.html.twig' %}
+
+
+</div><!-- #wrapper end -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============================================
+=================== Go to Top ===================
+============================================= -->
+
+<div id="gotoTop" class="fa fa-angle-up hidden-md"></div>
+
+
+
+
+
+
+
+
+
+
+<!-- ============================================
+============== Vendor JavaScripts ===============
+============================================= -->
+
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/superfish/js/superfish.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/jRespond/jRespond.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/smoothscroll/SmoothScroll.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/appear/jquery.appear.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/stellar/jquery.stellar.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/flexslider/jquery.flexslider-min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/magnific/jquery.magnific-popup.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/owl/owl.carousel.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/jflickrfeed/jflickrfeed.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/tweet-js/jquery.tweet.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/countTo/jquery.countTo.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/morrisjs/raphael-min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/morrisjs/morris.min.js')}}"></script>
+
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
+
+<!-- animsition js -->
+<script src="{{ asset('minovate/corporate/assets/js/vendor/animsition/js/jquery.animsition.min.js')}}"></script>
+
+
+
+
+
+
+
+<!-- ============================================
+============== Custom JavaScripts ===============
+============================================= -->
+
+
+<script type="text/javascript" src="{{ asset('minovate/corporate/assets/js/global.js')}}"></script>
+
+
+</body>
+</html>

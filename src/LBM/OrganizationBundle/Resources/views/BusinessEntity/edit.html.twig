@@ -1,0 +1,47 @@
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+<section class="tile">
+
+    <div class="tile-header dvd dvd-btm">
+        <h1 class="custom-font">ajouter une <strong>entité </strong></h1>
+
+    </div>
+
+    <div class="tile-body">
+
+        <section class="tile tile-simple">
+
+
+            {{ form_start(form) }}
+
+            <!-- tile widget -->
+            <div class='form-group'>
+                {{ form_label(form.name) }}
+                {{ form_errors(form.name) }}
+                {{ form_widget(form.name) }}
+            </div>
+
+            <!-- tile widget -->
+            <div class='form-group'>
+                {{ form_label(form.description) }}
+                {{ form_errors(form.description) }}
+                {{ form_widget(form.description) }}
+            </div>
+
+            <!-- tile widget -->
+            <div class='form-group' style="display: none">
+                {{ form_label(form.company) }}
+                {{ form_errors(form.company) }}
+                {{ form_widget(form.company) }}
+            </div>
+
+
+            {{ form_end(form) }}
+
+    </div>
+
+</section>
+
+
+
+

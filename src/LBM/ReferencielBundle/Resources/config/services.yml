@@ -1,0 +1,4 @@
+services:
+#    lbm_referenciel.example:
+#        class: LBM\ReferencielBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

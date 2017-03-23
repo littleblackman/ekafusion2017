@@ -1,0 +1,41 @@
+<div class="tile-body">
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th  style="width: 200px"></th>
+            <th  style="width: 20px">#</th>
+            <th>nom</th>
+            <th  style="width: 20px"></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% if business_entitys is defined %}
+            {% for business_entity in business_entitys %}
+
+                <tr>
+                    <td>
+                            <button type="button" class="btn btn-rounded-20 btn-default btn-sm" style="width:30px;">
+                                    <i class="fa fa-pencil"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-rounded-20 btn-default btn-sm" style="width:30px;">
+                                <i class="fa fa-eye" style="margin-left: -2px;"></i>
+                            </button>
+                    </td>
+                    <td>{{ business_entity.id }}</td>
+                    <td>{{ business_entity.name }}</td>
+
+                    <td>
+                            <i class="fa fa-trash deleteLbmBusinessEntityButton" id="deleteLbmBusinessEntity-{{  business_entity.id  }}" style="cursor: pointer"></i>
+                    </td>
+                </tr>
+
+            {% endfor %}
+        {% endif %}
+
+        </tbody>
+    </table>
+
+</div>

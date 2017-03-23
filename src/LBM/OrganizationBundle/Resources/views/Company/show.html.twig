@@ -1,0 +1,155 @@
+{% extends 'base.html.twig' %}
+
+
+{% block subnavigation %}
+    <button class="btn btn-primary btn-ef btn-ef-5 btn-ef-5b mb-10">
+        <i class="fa fa-user-plus"></i>
+        <span>Liste</span>
+    </button>
+
+
+
+    <button class="btn btn-primary btn-ef btn-ef-5 btn-ef-5b mb-10">
+        <i class="fa fa-user-plus"></i>
+        <span>Nouvelle</span>
+    </button>
+{% endblock %}
+
+{% block body %}
+
+    <div class="col-md-4">
+
+        <!-- tile -->
+        <section class="tile tile-simple">
+
+            <!-- tile widget -->
+            <div class="tile-widget bg-dutch text-center p-30">
+                <h1>{{ company.tradeName }}</h1>
+            </div>
+            <!-- /tile widget -->
+
+            <!-- tile body -->
+            <div class="tile-body text-center">
+                <h3 class="m-0">{{ company.corporateName }}</h3>
+                <span class="text-muted">
+                    {{ company.description }}
+                </span>
+            </div>
+
+            <div class="tile-body p-0">
+                <div class="list-group no-radius no-border">
+                    <div class="list-group-item" style="text-align: center">
+                        <div style="font-weight: bold">SIRET</div>
+                        {{ company.siret }}
+                    </div>
+
+                    <div class="list-group-item" style="text-align: center">
+                        <div style="font-weight: bold">SIREN</div>
+                        {{ company.siren }}
+                    </div>
+
+                    <div class="list-group-item" style="text-align: center">
+                        <div style="font-weight: bold">TVA Intra Communautaire</div>
+                        {{ company.tvaIntra }}
+                    </div>
+
+                    <div class="list-group-item" style="text-align: center">
+                        <div style="font-weight: bold">
+                            Date d'immatriculation RCS
+                        </div>
+                        {{ company.immatriculationRcsDate|date("d/m/Y") }}
+                    </div>
+
+                    <div class="list-group-item" style="text-align: center">
+                        <div style="font-weight: bold">
+                            Date de création
+                        </div>
+                         {{ company.createdAt|date("d/m/Y") }}
+                    </div>
+
+                    <div class="list-group-item" style="text-align: center">
+                        <div style="font-weight: bold">
+                            Forme juridique
+                        </div>
+                        {{ company.legalCategory.labelName }}
+                    </div>
+
+                    <div class="list-group-item" style="text-align: center">
+                        <div style="font-weight: bold">
+                            Code APE
+                        </div>
+                        {{ company.apeCode.code }}<br/>
+                        {{ company.apeCode.labelName }}
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- /tile body -->
+
+        </section>
+        <!-- /tile -->
+
+    </div>
+
+    <div class="col-md-4">
+
+
+
+        <!-- tile -->
+        <section class="tile tile-simple tbox">
+
+            <!-- tile widget -->
+            <div class="tile-widget bg-amethyst text-center p-30">
+
+                <h2 style="display: inline; text-align: left">Business Entités</h2>
+                <i id="addBusinessEntityButton" class="fa fa-plus" style="float: right; font-size: 40px; cursor: pointer"></i>
+            </div>
+
+            <div class="tile-body p-0">
+                <div id="addBusinessEntityTarget">
+
+                </div>
+
+                <div id="allEntity">
+                    {{  render(controller( "LBMOrganizationBundle:BusinessEntity:show", {'company_id' : company.id}))  }}
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- /tile -->
+
+    </div>
+
+
+
+
+
+
+
+{% endblock %}
+
+
+{% block script %}
+    <script type="text/javascript">
+        $('#addBusinessEntityButton').click(function() {
+            var url = "{{ path('createBusinessEntity',  {'company_id' : company.id}) }}";
+            $('#addBusinessEntityTarget').load(url);
+        })
+
+
+        $('.deleteLbmBusinessEntityButton').click(function () {
+            var el = $(this).attr('id');
+            var e  = el.split('-');
+            var id = e[1];
+
+            var url = "{{ path('deleteBusinessEntity')}}?id=";
+            $('#allEntity').load(url+id);
+
+        })
+
+
+    </script>
+{% endblock %}

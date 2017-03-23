@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    {% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+    <div class="col-md-6">
+
+        <section class="tile">
+
+            <div class="tile-header dvd dvd-btm">
+                <h1 class="custom-font">Créer un nouvelle <strong>Société </strong></h1>
+
+            </div>
+
+            <div class="tile-body">
+
+                {{ form_start(form) }}
+
+                    <input type="hidden" name="company_id" value="{{ company_id }}"/>
+
+                    <div class='form-group'>
+                        {{ form_label(form.corporateName) }}
+                        {{ form_errors(form.corporateName) }}
+                        {{ form_widget(form.corporateName) }}
+                    </div>
+
+                    <div class='form-group'>
+                        {{ form_label(form.tradeName) }}
+                        {{ form_errors(form.tradeName) }}
+                        {{ form_widget(form.tradeName) }}
+                    </div>
+
+                    <div class='form-group'>
+                        {{ form_label(form.description) }}
+                        {{ form_errors(form.description) }}
+                        {{ form_widget(form.description) }}
+                    </div>
+
+                    <div class='form-group'>
+                        {{ form_label(form.siren) }}
+                        {{ form_errors(form.siren) }}
+                        {{ form_widget(form.siren) }}
+                    </div>
+
+                    <div class='form-group'>
+                        {{ form_label(form.siret) }}
+                        {{ form_errors(form.siret) }}
+                        {{ form_widget(form.siret) }}
+                    </div>
+
+
+                    <div class='form-group'>
+                        {{ form_label(form.tvaIntra) }}
+                        {{ form_errors(form.tvaIntra) }}
+                        {{ form_widget(form.tvaIntra) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.immatriculationRcsDate) }}
+                        {{ form_errors(form.immatriculationRcsDate) }}
+                        <div class='input-group datepicker w-360' data-format="YYYY-MM-DD">
+
+                            {{ form_widget(form.immatriculationRcsDate) }}
+                            <span class="input-group-addon">
+                                <span class="fa fa-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class='form-group'>
+                        {{ form_label(form.legalCategory) }}
+                        {{ form_errors(form.legalCategory) }}
+                        {{ form_widget(form.legalCategory) }}
+                    </div>
+
+                    <div class='form-group'>
+                        {{ form_label(form.apeCode) }}
+                        {{ form_errors(form.apeCode) }}
+                        {{ form_widget(form.apeCode) }}
+                    </div>
+
+                    <div class='form-group' style="text-align: center">
+                        {{ form_widget(form.Sauvegarder) }}
+                    </div>
+
+                {{ form_end(form) }}
+
+                <br style="clear: both"/>
+            </div>
+
+        </section>
+
+    </div>
+
+{% endblock %}
+

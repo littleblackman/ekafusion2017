@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %}
+
+
+{% block subnavigation %}
+   <button class="btn btn-primary btn-ef btn-ef-5 btn-ef-5b mb-10">
+      <i class="fa fa-user-plus"></i>
+      <span>Liste</span>
+   </button>
+
+
+
+   <button class="btn btn-primary btn-ef btn-ef-5 btn-ef-5b mb-10">
+      <i class="fa fa-user-plus"></i>
+      <span>Nouveau</span>
+   </button>
+{% endblock %}
+
+{% block body %}
+
+
+   <div class="col-md-6">
+
+      <!-- tile -->
+      <section class="tile">
+
+         <!-- tile header -->
+         <div class="tile-header dvd dvd-btm">
+            <h1 class="custom-font"> Liste des <strong>Utilisateurs</strong></h1>
+
+            <ul class="controls">
+               <li>
+                  <a role="button" href="{{ path('editUser') }}" title="Créer un nouvel utilisateur" style="color: grey">
+                     <i class="fa fa-user-plus">
+                     </i>
+                  </a>
+               </li>
+            </ul>
+
+
+
+         </div>
+         <!-- /tile header -->
+
+         <!-- tile body -->
+         <div class="tile-body p-0">
+
+            <table class="table table-striped">
+               <thead>
+               <tr>
+                  <th  style="width: 200px"></th>
+                  <th  style="width: 20px">#</th>
+                  <th>Username</th>
+                  <th>Avatar</th>
+                  <th  style="width: 20px"></th>
+               </tr>
+               </thead>
+               <tbody>
+
+               {% if users is defined %}
+                  {% for user in users %}
+
+                     <tr>
+                        <td>
+                           <a href="{{ path('editUser') }}" style="color: black">
+
+                              <button type="button" class="btn btn-rounded-20 btn-default btn-sm" style="width:30px;">
+                                 <i class="fa fa-pencil"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-rounded-20 btn-default btn-sm" style="width:30px;">
+                                 <i class="fa fa-eye" style="margin-left: -2px;"></i>
+                              </button>
+
+
+                           </a>
+                        </td>
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>
+                           {% if(user.avatarUrl) %}
+                              <img src="{{ asset(user.avatarUrl) }}" alt="" class="img-circle size-30x30">
+                           {% endif %}
+                        </td>
+                        <td>
+                           <a href="{{ path('deleteUser') }}" style="color: black">
+                              <i class="fa fa-trash"></i>
+                           </a>
+                        </td>
+                     </tr>
+
+                  {% endfor %}
+               {% endif %}
+
+               </tbody>
+            </table>
+
+         </div>
+         <!-- /tile body -->
+
+      </section>
+      <!-- /tile -->
+
+
+   </div>
+
+
+{% endblock %}
