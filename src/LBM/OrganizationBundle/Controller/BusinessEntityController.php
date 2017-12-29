@@ -62,11 +62,11 @@ class BusinessEntityController extends Controller
 
         return $this->render(
             'LBMOrganizationBundle:BusinessEntity:edit.html.twig',
-            array(
-                'form' => $form->createView(),
-                'business_entity_id' => $business_entity_id,
-                'company_id' => $company_id
-            )
+                                                                array(
+                                                                    'form' => $form->createView(),
+                                                                    'business_entity_id' => $business_entity_id,
+                                                                    'company_id' => $company_id
+                                                                )
         );
     }
 
@@ -91,7 +91,6 @@ class BusinessEntityController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($businessEntity);
                 $em->flush();
-
 
                 $request->getSession()->getFlashBag()->add('notice', 'Entité Business bien enregistrée.');
                 return $this->redirectToRoute('showCompany',  array('company_id' => $businessEntity->getCompany()->getId()));

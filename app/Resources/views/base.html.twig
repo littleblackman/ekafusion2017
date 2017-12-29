@@ -33,8 +33,6 @@
 
     <!--/ stylesheets -->
 
-
-
     <!-- ==========================================
     ================= Modernizr ===================
     =========================================== -->
@@ -73,8 +71,8 @@
             <div class="page page-dashboard">
                 <div class="pageheader">
                     <h2>
-                        {{ app.request.attributes.get('_route')|getTitlePageName }}
-                        <span>// {{ app.request.attributes.get('_route')|getDetailsPageName }}</span>
+                        {{ app.request.attributes.get('_route')|getTitlePageName|capitalize }}
+                        <span>// {{ app.request.attributes.get('_route')|getDetailsPageName|capitalize }}</span>
                     </h2>
                     <div class="page-bar">
                         <ul class="page-breadcrumb">
@@ -106,14 +104,9 @@
 
     </div>
 
-
-
     <!-- ============================================
     ============== Vendor JavaScripts ===============
     ============================================= -->
-
-
-
 
 
     <script type="text/javascript" src="{{ asset('minovate/assets/js/vendor/jquery/jquery-1.11.2.min.js') }}"></script>
@@ -121,12 +114,7 @@
     <script type="text/javascript" src="{{ asset('minovate/assets/js/vendor/jRespond/jRespond.min.js') }}"></script>
 
 
-
-
-
     <script type="text/javascript" src="{{ asset('minovate/assets/js/vendor/sparkline/jquery.sparkline.min.js') }}"></script>
-
-
 
    <!-- <script type="text/javascript" src="{{ asset('minovate/assets/js/vendor/rickshaw/rickshaw.min.js') }}"></script>-->
     <script type="text/javascript" src="{{ asset('minovate/assets/js/vendor/slimscroll/jquery.slimscroll.min.js') }}"></script>

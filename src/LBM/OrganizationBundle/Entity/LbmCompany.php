@@ -2,6 +2,7 @@
 
 namespace LBM\OrganizationBundle\Entity;
 
+
 use Doctrine\ORM\Mapping as ORM;
 use LBM\ExtensionBundle\Entity\LbmExtensionEntity;
 

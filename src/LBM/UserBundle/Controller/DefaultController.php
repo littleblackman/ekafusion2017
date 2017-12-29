@@ -37,7 +37,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/creer-un-utilisateur.html", name="editUser")
-     */
+     *
     public function editAction(Request $request)
     {
         $user = new LbmUser() ;
@@ -54,37 +54,49 @@ class DefaultController extends Controller
                                                         'form' => $form->createView()
                                                     )
         );
-    }
+    }*/
 
 
 
     /**
-     * @Route("/modification-utilisateur.html", name="editUser")
-
-    public function editAction(Request $request)
+     * @Route("/creer-un-utilisateur.html", name="createUser")
+     * @Route("/modification-utilisateur-{user_id}.html", name="editUser")
+    */
+    public function editAction(Request $request, $user_id = null)
     {
 
         $repository = $this->getDoctrine()
             ->getManager()
-            ->getRepository('LBMUserBundle:User');
+            ->getRepository('LBMUserBundle:LbmUser');
 
-        $users = $repository->findAll();
+        $user = $repository->findOneBy(array('id' => $user_id));
+
+        $form = $this->createForm(LbmUserType::class, $user);
 
         return $this->render(
-            'LBMUserBundle:Default:index.html.twig',
+            'LBMUserBundle:Default:edit.html.twig',
             array(
-                'users' => $users
+                'form' => $form->createView(), 'user_id' => $user_id
             )
         );
-    } */
+    }
 
     /**
-     * @Route("/mise-a-jour-utilisateur.html", name="updateUser")
+     * @Route("/mise-a-jour-utilisateur-{user_id}.html", name="updateUser")
      */
-    public function updateAction(Request $request)
+    public function updateAction(Request $request, $user_id = null)
     {
 
-        $user = new LbmUser();
+        if($user_id) {
+            $repository = $this->getDoctrine()
+                ->getManager()
+                ->getRepository('LBMUserBundle:LbmUser');
+
+            $user = $repository->findOneBy(array('id' => $user_id));
+        } else {
+            $user = new LbmUser();
+        }
+
 
         $form = $this->createForm(LbmUserType::class, $user);
 
@@ -96,7 +108,7 @@ class DefaultController extends Controller
                 $em->persist($user);
                 $em->flush();
 
-                $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
+                $request->getSession()->getFlashBag()->add('notice', 'User ajouté.');
 echo 'yes';
                 return $this->redirectToRoute('indexUser');
             //}

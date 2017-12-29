@@ -17,7 +17,7 @@ class SecurityController extends Controller
 
         // Si le visiteur est déjà identifié, on le redirige vers l'accueil
         if ($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
-            return $this->redirectToRoute('oc_platform_accueil');
+            return $this->redirectToRoute('dashboard');
         }
 
         // Le service authentication_utils permet de récupérer le nom d'utilisateur
@@ -26,21 +26,19 @@ class SecurityController extends Controller
         $authenticationUtils = $this->get('security.authentication_utils');
 
 
-
         return $this->render('LBMUserBundle:Default:login.html.twig', array(
             'last_username' => $authenticationUtils->getLastUsername(),
             'error'         => $authenticationUtils->getLastAuthenticationError(),
         ));
 
-        return $this->render('LBMUserBundle:Default:index.html.twig');
+        //return $this->render('LBMUserBundle:Default:index.html.twig');
     }
-
 
     /**
      * @Route("/login_check", name="login_check")
      */
     public function loginChekAction() {
-
+        echo 'yes';
     }
 
     /**

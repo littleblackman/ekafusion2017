@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new LBM\ContactBundle\LBMContactBundle(),
             new LBM\ReferencielBundle\LBMReferencielBundle(),
             new LBM\ExtensionBundle\LBMExtensionBundle(),
+            new EkaBundle\EkaBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

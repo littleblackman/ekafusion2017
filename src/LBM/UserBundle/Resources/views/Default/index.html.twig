@@ -29,7 +29,7 @@
 
             <ul class="controls">
                <li>
-                  <a role="button" href="{{ path('editUser') }}" title="Créer un nouvel utilisateur" style="color: grey">
+                  <a role="button" href="{{ path('createUser') }}" title="Créer un nouvel utilisateur" style="color: grey">
                      <i class="fa fa-user-plus">
                      </i>
                   </a>
@@ -61,7 +61,7 @@
 
                      <tr>
                         <td>
-                           <a href="{{ path('editUser') }}" style="color: black">
+                           <a href="{{ path('editUser',  {'user_id' : user.id} )   }}" style="color: black">
 
                               <button type="button" class="btn btn-rounded-20 btn-default btn-sm" style="width:30px;">
                                  <i class="fa fa-pencil"></i>

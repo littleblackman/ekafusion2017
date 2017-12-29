@@ -17,8 +17,9 @@ class LbmUserType extends AbstractType
     {
         $builder
             ->add('username', TextType::class, array( 'attr' => array('placeholder' => 'Nom d\'utilisateur')))
-            ->add('password', TextType::class, array( 'attr' => array('placeholder' => 'Mot de passe')))
+            ->add('password', PasswordType::class, array( 'attr' => array('placeholder' => 'Mot de passe')))
             ->add('salt', HiddenType::class, array('data' => '878787878'))
+
             ->add('save', SubmitType::class);
     }
 }

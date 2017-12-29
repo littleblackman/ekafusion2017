@@ -1,3 +1,8 @@
+eka:
+    resource: "@EkaBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 lbm_extension:
     resource: "@LBMExtensionBundle/Controller/"
     type:     annotation
