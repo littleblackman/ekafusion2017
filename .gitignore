@@ -1,6 +1,6 @@
 /app/config/parameters.yml
-/bin
-/data
-/tests
-/var
-/vendor
+/bin/
+/data/
+/tests/
+/var/
+/vendor/
