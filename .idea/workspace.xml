@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd76756f-fc92-4476-8887-da089bc52f8b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EkaBundle/Controller/FamilyController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/LBM/ExtensionBundle/Service/LbmStringTools.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/LBM/DashboardBundle/TwigExtension/UserFriendly.php" afterPath="$PROJECT_DIR$/src/LBM/ExtensionBundle/TwigExtension/UserFriendly.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/EKAFusion.iml" afterPath="$PROJECT_DIR$/.idea/EKAFusion.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/sidebar.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/sidebar.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LBM/OrganizationBundle/Controller/BusinessEntityController.php" afterPath="$PROJECT_DIR$/src/LBM/OrganizationBundle/Controller/BusinessEntityController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LBM/OrganizationBundle/Entity/LbmCompany.php" afterPath="$PROJECT_DIR$/src/LBM/OrganizationBundle/Entity/LbmCompany.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LBM/UserBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/LBM/UserBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LBM/UserBundle/Controller/SecurityController.php" afterPath="$PROJECT_DIR$/src/LBM/UserBundle/Controller/SecurityController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LBM/UserBundle/Form/LbmUserType.php" afterPath="$PROJECT_DIR$/src/LBM/UserBundle/Form/LbmUserType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LBM/UserBundle/Resources/views/Default/edit.html.twig" afterPath="$PROJECT_DIR$/src/LBM/UserBundle/Resources/views/Default/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LBM/UserBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/LBM/UserBundle/Resources/views/Default/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LBM/UserBundle/Resources/views/Default/login.html.twig" afterPath="$PROJECT_DIR$/src/LBM/UserBundle/Resources/views/Default/login.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="EKAFusion.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,11 +45,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LbmCompanyType.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LbmCompanyType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LBM/OrganizationBundle/Form/LbmCompanyType.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="16">
               <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -179,7 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LBM/UserBundle/Repository/LbmUserRepository.php" />
         <option value="$PROJECT_DIR$/src/LBM/UserBundle/Repository/LbmRoleRepository.php" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/LBM/ContactBundle/Entity/LbmEmail.php" />
@@ -230,6 +220,7 @@
         <option value="$PROJECT_DIR$/src/LBM/ExtensionBundle/TwigExtension/UserFriendly.php" />
         <option value="$PROJECT_DIR$/src/LBM/OrganizationBundle/Controller/BusinessEntityController.php" />
         <option value="$PROJECT_DIR$/src/LBM/DashboardBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -544,18 +535,19 @@
       <workItem from="1512414410188" duration="79000" />
       <workItem from="1512420772533" duration="3425000" />
       <workItem from="1513932016864" duration="3155000" />
-      <workItem from="1514537672111" duration="674000" />
+      <workItem from="1514537672111" duration="882000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="348683000" />
+    <option name="totallyTimeSpent" value="348891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32417583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32417583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -755,13 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EkaBundle/Controller/FamilyController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -841,6 +826,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
           <folding />
         </state>
       </provider>
